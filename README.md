@@ -1,40 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+# 🎯 IntelliView: AI-Powered Interview Platform
 
-First, run the development server:
+IntelliView is an intelligent, full-stack interview platform that records audio and video responses from candidates, stores them securely, and provides an admin dashboard for reviewing and managing interviews. Ideal for hiring teams who want to automate and scale their initial screening process with AI assistance.
+
+---
+
+<img width="1920" height="907" alt="Screenshot (280)" src="https://github.com/user-attachments/assets/371b827d-483e-428d-8169-34d7cbee6e24" />
+
+
+## 🚀 Features
+
+- 🎥 **Webcam + Microphone Recording** (using MediaRecorder API)
+- ☁️ **Firebase Integration** for authentication, Firestore database, and storage
+- 📤 **Cloudinary Uploads** for high-speed media storage and CDN access
+- 📋 **Metadata Storage** in Firestore (timestamps, candidate info, interview data)
+- 📄 **PDF Report Generation** post interview
+- 📊 **Admin Analytics Dashboard** with filters, download, and insights
+- 🔐 **Secure API Key Handling** with `.env.local`
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: [Next.js](https://nextjs.org/), React, Tailwind CSS
+- **Backend**: Firebase (Auth, Firestore, Storage), Cloudinary API
+- **Media Handling**: MediaRecorder API, Blob handling, base64 conversion
+- **PDF Generation**: jsPDF / react-pdf (based on your choice)
+- **Deployment**: Vercel (optional)
+---
+
+## ⚙️ Getting Started (Run Locally)
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/adwait-bhavthankar/intelliview.git
+cd intelliview
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set Up Environment Variables
+
+Create a `.env.local` file at the root:
+
+```env
+# Firebase config
+NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+
+# Cloudinary
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+### 4. Run Development Server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to view the app.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 📦 Deployment (Optional)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+You can deploy this project seamlessly on [Vercel](https://vercel.com):
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push your repo to GitHub
+2. Import to Vercel
+3. Set up environment variables on the Vercel dashboard
+4. Deploy 🚀
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧠 Future Enhancements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- 💬 AI question generation using LLMs (OpenAI / Mistral / Gemini)
+- 🧠 NLP-based semantic analysis of responses
+- ✅ Auto-evaluation and match scoring
+- 📈 Interview analytics with charts
+- 🔎 Smart search and tagging in admin panel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---
+
+## 📄 License
+
+MIT License © 2025 Adwait Bhavthankar
+
+---
+
+## 🙌 Credits
+
+- Developed by Adwait Bhavthankar
+- Powered by Firebase, Cloudinary, and Next.js
